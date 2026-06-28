@@ -45,13 +45,12 @@
   }
 
   .logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.35rem;
-    letter-spacing: -0.5px;
-    color: var(--white);
+    display: flex; align-items: center; gap: 10px;
   }
-  .logo span { color: var(--ship); }
+  .logo-img {
+    height: 36px; width: auto;
+    display: block;
+  }
 
   .nav-links { display: flex; gap: 32px; list-style: none; }
   .nav-links a {
@@ -436,18 +435,22 @@
     width: 100%; max-width: 320px;
     aspect-ratio: 1;
     border-radius: 20px;
-    background: linear-gradient(135deg, var(--border), var(--bg));
     border: 1px solid var(--border);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 5rem;
-    position: relative;
     overflow: hidden;
+    position: relative;
+  }
+
+  .about-avatar img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
   .about-avatar::after {
     content: '';
     position: absolute; inset: 0;
     background: linear-gradient(135deg, rgba(0,229,255,0.05), transparent);
+    pointer-events: none;
   }
 
   .about-content .section-label { margin-bottom: 12px; }
@@ -531,16 +534,6 @@
     flex-wrap: wrap; gap: 16px;
   }
 
-  .footer-logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.1rem;
-    color: var(--white);
-  }
-  .footer-logo span { color: var(--ship); }
-
-  .footer-copy { font-size: 0.8rem; color: var(--muted); }
-
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .nav-links { display: none; }
@@ -561,7 +554,7 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">Ship<span>Lab</span></div>
+  <a href="/" class="logo"><img src="logo.png" alt="ShipLab" class="logo-img"></a>
   <ul class="nav-links">
     <li><a href="#offer">What You Get</a></li>
     <li><a href="#process">Process</a></li>
@@ -762,7 +755,7 @@
 <!-- ABOUT -->
 <section class="about-section" id="about">
   <div class="about-inner">
-    <div class="about-avatar">👨‍💻</div>
+    <div class="about-avatar"><img src="mypicture.png" alt="Awais"></div>
     <div class="about-content">
       <div class="section-label">Who Builds It</div>
       <h2>I'm Awais — a full-stack developer who ships fast and communicates clearly.</h2>
@@ -791,7 +784,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Ship<span>Lab</span></div>
+   <a href="/" class="logo"><img src="logo.png" alt="ShipLab" class="logo-img" style="height:28px;"></a>
   <div class="footer-copy">© 2026 ShipLab. All rights reserved.</div>
   <div class="footer-copy">Built by a builder, for builders.</div>
 </footer>
