@@ -14,6 +14,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <style>
     *,
     *::before,
@@ -860,6 +862,66 @@
       }
     }
 
+    .faq-list {
+      margin-top: 48px;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-item:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 22px 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      transition: color 0.2s ease;
+    }
+
+    .faq-q:hover {
+      color: var(--accent);
+    }
+
+    .faq-q .icon {
+      font-family: var(--font-mono);
+      color: var(--accent);
+      transition: transform 0.3s ease;
+      font-size: 1.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .faq-item.open .faq-q .icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .faq-a p {
+      padding-bottom: 22px;
+      max-width: 560px;
+    }
+
     .final-cta {
       padding: 120px 6vw;
       text-align: center;
@@ -1407,6 +1469,84 @@
 
   <div class="section-divider"><svg viewBox="0 0 1200 1"><line x1="0" y1="0" x2="1200" y2="0" stroke="#161C28" stroke-width="1" /></svg></div>
 
+  <!-- VIDEO -->
+  <section class="section-frame" id="video">
+    <div class="frame-side" data-reveal>
+      <div class="eyebrow"><span class="idx">06</span> Watch</div>
+      <h2>See it in action</h2>
+      <p class="frame-lede">A walkthrough of how ShipLab builds and ships AI systems — from discovery to deploy.</p>
+    </div>
+    <div style="margin-top:48px;" data-reveal>
+      <div
+        style="position:relative; padding-bottom:56.25%; height:0; border-radius:var(--radius); overflow:hidden; border:1px solid var(--accent-border); box-shadow:0 0 40px rgba(255,107,53,0.06); background:var(--bg-inset);">
+        <iframe src="https://www.loom.com/embed/380c504351e94831893e54ec859a78cc"
+          style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><svg viewBox="0 0 1200 1"><line x1="0" y1="0" x2="1200" y2="0" stroke="#161C28" stroke-width="1" /></svg></div>
+
+  <!-- FAQ -->
+  <section class="section-frame" id="faq">
+    <div class="frame-side" data-reveal>
+      <div class="eyebrow"><span class="idx">07</span> FAQ</div>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq-list" data-reveal>
+      <div class="faq-item">
+        <button class="faq-q">How long does a project take? <span class="icon">+</span></button>
+        <div class="faq-a">
+          <p>Most builds run 2–4 weeks depending on scope. Discovery and design happen up front so the build phase stays predictable.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How much does it cost? <span class="icon">+</span></button>
+        <div class="faq-a">
+          <p>Pricing is fixed per project, scoped after the discovery call. No hourly billing — you know the number before work starts.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Who owns the code? <span class="icon">+</span></button>
+        <div class="faq-a">
+          <p>You do, fully. You get the repo, documentation, and a handoff walkthrough — no dependency on ShipLab to keep it running.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you provide post-launch support? <span class="icon">+</span></button>
+        <div class="faq-a">
+          <p>Yes. Every project includes a post-launch support window, and ongoing maintenance is available if you need it.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can you integrate with our existing tools? <span class="icon">+</span></button>
+        <div class="faq-a">
+          <p>Generally yes — CRMs, calendars, email, payment processors, and most tools with an API or integration platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><svg viewBox="0 0 1200 1"><line x1="0" y1="0" x2="1200" y2="0" stroke="#161C28" stroke-width="1" /></svg></div>
+
+  <!-- APPLY -->
+  <section class="section-frame" id="apply">
+    <div class="frame-side" data-reveal>
+      <div class="eyebrow"><span class="idx">08</span> Apply</div>
+      <h2>Start your project</h2>
+      <p class="frame-lede">Fill out the form below and we'll get back to you within 24 hours.</p>
+    </div>
+    <div style="margin-top:48px;" data-reveal>
+      <div
+        style="border-radius:var(--radius); overflow:hidden; border:1px solid var(--accent-border); box-shadow:0 0 40px rgba(255,107,53,0.06); background:var(--bg-inset);">
+        <iframe src="https://tally.so/embed/ja2D9a?hideTitle=1&transparentBackground=1"
+          style="width:100%;height:900px;border:none;" allowtransparency="true" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"><svg viewBox="0 0 1200 1"><line x1="0" y1="0" x2="1200" y2="0" stroke="#161C28" stroke-width="1" /></svg></div>
+
   <!-- FINAL CTA -->
   <section class="final-cta" id="contact">
     <div class="eyebrow">Get Started</div>
@@ -1469,6 +1609,22 @@
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     revealEls.forEach(el => io.observe(el));
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const btn = item.querySelector('.faq-q');
+      const answer = item.querySelector('.faq-a');
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(open => {
+          open.classList.remove('open');
+          open.querySelector('.faq-a').style.maxHeight = null;
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
 
     const navToggle = document.getElementById('navToggle');
     navToggle.addEventListener('click', () => {
